@@ -11,8 +11,11 @@ function build ()
   if response == "test" then
     rednet.broadcast("ok")
     id,buildmsg = rednet.receive()
-    if id == 1 and buildmsg == "build" then
+    if id == 1 and buildmsg == "begin" then
+      rednet.broadcast("Uw kasteel wordt gebouwd bedankt voor het gebruiken van Boricraft-Development builder")
       redstone.setOutput("back", true)
+    else
+      return
     end
   end
   
