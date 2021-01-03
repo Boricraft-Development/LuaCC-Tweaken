@@ -23,3 +23,6 @@ end
 function bouw ()
   rednet.isOpen("left")
 end
+
+
+setup()
