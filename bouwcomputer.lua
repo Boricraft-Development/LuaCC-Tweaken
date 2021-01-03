@@ -28,7 +28,7 @@ function bouw ()
   t = rednet.isOpen("left")
   rednet.broadcast("test")
   id,response = rednet.receive(5)
-  if t == false or respone == nil then
+  if t == false or respone ~= "ok" then
     return print("Er was een fout bij het uitvoeren van dit programma. Het is mogelijk dat de rednet port niet goed geopend is of dat het programma op de bouwslaves gecrasht of niet uitgevoerd is. Herstart het programma en kijk of de fout er nog is. Als de fout er nog is conctacteer dan de producent van deze software.")
   else
     rednet.broadcast("begin")
