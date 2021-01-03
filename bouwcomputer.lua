@@ -14,7 +14,7 @@ function kiezen ()
     bouw()
     return print("de bouw is begonnen")
   elseif answer == "N" then
-    os.shutdown()
+    os.reboot()
   else
     print("Je moet een optie kiezen")
   end
