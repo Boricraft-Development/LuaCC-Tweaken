@@ -13,7 +13,6 @@ function kiezen ()
   answer = io.read()
   if answer == "J" then
     bouw()
-    return print("de bouw is begonnen")
   elseif answer == "N" then
     os.reboot()
   else
